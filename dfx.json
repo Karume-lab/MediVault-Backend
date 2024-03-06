@@ -1,0 +1,20 @@
+{
+  "canisters": {
+    "canisters": {
+      "build": "npx azle canisters",
+      "candid": "src/backend/canisters/candid_files/index.did",
+      "gzip": true,
+      "main": "src/backend/canisters/index.ts",
+      "type": "custom",
+      "wasm": ".azle/canisters/canisters.wasm"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
