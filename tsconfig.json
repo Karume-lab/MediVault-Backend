@@ -6,7 +6,8 @@
         "strictPropertyInitialization": false,
         "moduleResolution": "node",
         "allowJs": true,
-        "outDir": "HACK_BECAUSE_OF_ALLOW_JS",
-        "allowSyntheticDefaultImports": true
-    }
+        "outDir": "dist"
+    },
+    "include": ["src/**/*.ts", "src/**/*.js"],
+    "exclude": ["node_modules", "dist"]
 }

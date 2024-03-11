@@ -1,12 +1,12 @@
 {
   "canisters": {
-    "canisters": {
-      "build": "npx azle canisters",
-      "candid": "src/backend/canisters/candid_files/index.did",
+    "api": {
+      "build": "npx azle api",
+      "candid": "src/candid_defs/api.did",
       "gzip": true,
-      "main": "src/backend/canisters/index.ts",
+      "main": "src/api/index.ts",
       "type": "custom",
-      "wasm": ".azle/canisters/canisters.wasm"
+      "wasm": ".azle/api/api.wasm"
     }
   },
   "defaults": {

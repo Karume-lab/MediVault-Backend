@@ -1,0 +1,7 @@
+service: () -> {
+    addDoctor: (record {email:text; first_name:text; last_name:text; phoneNumber:text}) -> (variant {Ok:record {id:text; createdAt:nat64; email:text; updatedAt:opt nat64; first_name:text; last_name:text; phoneNumber:text}; Err:variant {UnexpectedError:text; EntityDoesNotExist:text}});
+    deleteDoctor: (text) -> (variant {Ok:record {id:text; createdAt:nat64; email:text; updatedAt:opt nat64; first_name:text; last_name:text; phoneNumber:text}; Err:variant {UnexpectedError:text; EntityDoesNotExist:text}});
+    getDoctors: () -> (vec record {id:text; createdAt:nat64; email:text; updatedAt:opt nat64; first_name:text; last_name:text; phoneNumber:text}) query;
+    getString: () -> (text) query;
+    updateDoctor: (text, record {email:text; first_name:text; last_name:text; phoneNumber:text}) -> (variant {Ok:record {id:text; createdAt:nat64; email:text; updatedAt:opt nat64; first_name:text; last_name:text; phoneNumber:text}; Err:variant {UnexpectedError:text; EntityDoesNotExist:text}});
+}
