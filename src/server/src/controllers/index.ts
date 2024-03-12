@@ -1,3 +1,3 @@
-import testServer from "./testServer";
+import test from "./test";
 
-export { testServer };
+export { test };

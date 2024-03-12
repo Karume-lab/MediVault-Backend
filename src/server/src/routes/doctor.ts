@@ -12,7 +12,7 @@ import {
 import { Request, Response, Router } from "express";
 import { v4 as uuidv4 } from "uuid";
 
-const router = Router();
+const doctorRouter = Router();
 
 const Doctor = Record({
   id: text,
@@ -44,27 +44,19 @@ type doctorErrorType = typeof DoctorError.tsType;
 
 const DoctorStorage = StableBTreeMap<text, doctorType>(0);
 
-router.post("/doctors", (req: Request<doctorPayloadType>, res: Response) => {
-  const doctor: doctorType = {
-    id: uuidv4(),
-    // updatedAt: None,
-    // createdAt: ic.time(),
-    ...req.body,
-  };
-  DoctorStorage.insert(doctor.id, doctor);
-  return res.status(201).json(doctor);
+doctorRouter.post(
+  "/doctors",
+  (req: Request<doctorPayloadType>, res: Response) => {}
+);
+doctorRouter.get("/doctors", (req: Request, res: Response) => {
+  return res.status(200).json({ doctors: "Ok(DoctorStorage.values())" });
 });
-router.get("/doctors", (req: Request, res: Response) => {
-  return res.status(200).json({"doctors": "Ok(DoctorStorage.values())"});
-});
-router.get("/doctors/:id", (req: Request, res: Response) => {
+doctorRouter.get("/doctors/:id", (req: Request, res: Response) => {
   return res.status(200).send("Hello World");
 });
-router.put("/doctors/:id", (req: Request, res: Response) => {
+doctorRouter.put("/doctors/:id", (req: Request, res: Response) => {
   return res.status(200).send("Hello World");
 });
-router.delete("/doctors/:id", (req: Request, res: Response) => {
+doctorRouter.delete("/doctors/:id", (req: Request, res: Response) => {
   return res.status(200).send("Hello World");
 });
-
-export default router;
