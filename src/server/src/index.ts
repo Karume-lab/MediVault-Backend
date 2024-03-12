@@ -12,7 +12,7 @@ const app = express();
 
 app.use(cors());
 app.get("/test", async (req: Request, res: Response) => {
-  // try {
+  try {
     const getTest = async () => {
       const agent = new HttpAgent({
         host: "http://127.0.0.1:4943",
@@ -27,9 +27,9 @@ app.get("/test", async (req: Request, res: Response) => {
     };
     const testString = await getTest();
     return res.status(200).json({ testString: testString });
-//   } catch (error) {
-//     return res.status(404).json({ notFound: "Server Error" });
-//   }
+  } catch (error) {
+    return res.status(404).json({ notFound: "Server Error" });
+  }
 });
 
 app
