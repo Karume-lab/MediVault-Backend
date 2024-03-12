@@ -22,7 +22,7 @@ app.get("/test", async (req: Request, res: Response) => {
         agent,
         canisterId: Principal.fromText("bkyz2-fmaaa-aaaaa-qaaaq-cai"),
       });
-      const str = await testActor.hello();
+      const str = await testActor.test();
       return str;
     };
     const testString = await getTest();
