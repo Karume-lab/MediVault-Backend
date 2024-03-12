@@ -19,11 +19,8 @@ import { doctorPayloadType, doctorType } from "../types";
 import EntityError from "../entities/EntityError";
 
 export default Canister({
-  tester: query([], text, () => {
-    return "Another ...";
-  }),
-  hello: query([], text, () => {
-    return "Hello World";
+  test: query([], text, () => {
+    return "Testing ...";
   }),
   getDoctors: query([], Vec(Doctor), () => {
     return DoctorStorage.values();
