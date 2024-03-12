@@ -16,6 +16,9 @@
 # generated files
 **/declarations/
 
+# generated candid files
+**/candid_defs/
+
 # rust
 target/
 
