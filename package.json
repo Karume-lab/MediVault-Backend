@@ -21,6 +21,7 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "azle": "^0.20.2"
+    "azle": "^0.20.2",
+    "node-fetch": "^3.3.2"
   }
 }

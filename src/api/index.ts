@@ -22,6 +22,9 @@ export default Canister({
   tester: query([], text, () => {
     return "Another ...";
   }),
+  hello: query([], text, () => {
+    return "Hello World";
+  }),
   getDoctors: query([], Vec(Doctor), () => {
     return DoctorStorage.values();
   }),
