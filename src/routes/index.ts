@@ -1,3 +1,4 @@
+import hospitalProfileRouter from "./hospitalProfiles";
 import medicalRecordRouter from "./medicalRecords";
 import profileRouter from "./profiles";
 import requestAccessRouter from "./requestAccess";
@@ -10,4 +11,5 @@ export {
   medicalRecordRouter,
   profileRouter,
   requestAccessRouter,
+  hospitalProfileRouter,
 };

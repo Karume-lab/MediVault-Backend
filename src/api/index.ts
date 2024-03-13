@@ -2,6 +2,7 @@ import { Server } from "azle";
 import express from "express";
 import cors from "cors";
 import {
+  hospitalProfileRouter,
   medicalRecordRouter,
   profileRouter,
   requestAccessRouter,
@@ -17,6 +18,7 @@ export default Server(() => {
   app.use(medicalRecordRouter);
   app.use(profileRouter);
   app.use(requestAccessRouter);
+  app.use(hospitalProfileRouter);
 
   app.use(cors);
   return app.listen();

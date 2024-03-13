@@ -1,7 +1,13 @@
 ENDPOINTS:
 # medical records
 # profiles
-request access
+# request access
 hospitals allowed
 authentcication
 protect the endpoints
+
+TODO:
+Validation
+Validate the JSON: use zod?
+Define optional and non-optional fields
+Verify the FKs exist

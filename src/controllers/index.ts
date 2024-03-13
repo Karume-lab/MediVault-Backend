@@ -21,6 +21,13 @@ import {
   updateRequestAccess,
   deleteRequestAccess,
 } from "./requestAccess";
+import {
+  addHospitalProfile,
+  getHospitalProfile,
+  getHospitalProfiles,
+  updateHospitalProfile,
+  deleteHospitalProfile,
+} from "./hospitalProfiles";
 
 export {
   test,
@@ -44,4 +51,9 @@ export {
   getRequestAccesses,
   updateRequestAccess,
   deleteRequestAccess,
+  addHospitalProfile,
+  getHospitalProfile,
+  getHospitalProfiles,
+  updateHospitalProfile,
+  deleteHospitalProfile,
 };
