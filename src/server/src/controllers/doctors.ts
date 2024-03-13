@@ -2,31 +2,27 @@ import { Request, Response } from "express";
 import { Actor, HttpAgent } from "@dfinity/agent";
 import { Principal } from "@dfinity/principal";
 import { idlFactory } from "./../../../declarations/api";
-import { ECDSAKeyIdentity } from "@dfinity/identity";
 
 const addDoctor = async (req: Request, res: Response) => {
-  //   const identity = await ECDSAKeyIdentity.generate();
-  console.log(req.body);
-  return res.status(201).json(req.body);
-  //   try {
-  //     const getDoctorsAPI = async () => {
-  //       const agent = new HttpAgent({
-  //         host: "http://127.0.0.1:4943",
-  //         verifyQuerySignatures: false,
-  //       });
-  //       const doctorActor = Actor.createActor(idlFactory, {
-  //         agent,
-  //         canisterId: Principal.fromText("bkyz2-fmaaa-aaaaa-qaaaq-cai"),
-  //       });
-  //       const doctors = await doctorActor.getDoctors();
-  //       return doctors;
-  //     };
+  try {
+    const getDoctorsAPI = async () => {
+      const agent = new HttpAgent({
+        host: "http://127.0.0.1:4943",
+        verifyQuerySignatures: false,
+      });
+      const doctorActor = Actor.createActor(idlFactory, {
+        agent,
+        canisterId: Principal.fromText("bkyz2-fmaaa-aaaaa-qaaaq-cai"),
+      });
+      const doctors = await doctorActor.getDoctors();
+      return doctors;
+    };
 
-  //     const doctors = getDoctorsAPI();
-  //     return res.status(200).json({ doctors });
-  //   } catch (error) {
-  //     return res.status(404).json({ notFound: "Server Error" });
-  //   }
+    const doctors = getDoctorsAPI();
+    return res.status(200).json({ doctors });
+  } catch (error) {
+    return res.status(404).json({ notFound: "Server Error" });
+  }
 };
 
 const getDoctor = async (req: Request, res: Response) => {
