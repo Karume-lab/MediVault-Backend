@@ -1,0 +1,6 @@
+# medical records
+profiles
+request access
+hospitals allowed
+authentcication
+protect the endpoints
