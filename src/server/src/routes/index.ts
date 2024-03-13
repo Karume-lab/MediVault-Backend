@@ -1,3 +1,4 @@
+import doctorRouter from "./doctor";
 import testRouter from "./test";
 
-export { testRouter };
+export { testRouter, doctorRouter };

@@ -25,6 +25,17 @@ export default Canister({
   getDoctors: query([], Vec(Doctor), () => {
     return DoctorStorage.values();
   }),
+  getDoctor: query([text], Result(Doctor, EntityError), (id) => {
+    try {
+      const doctorOpt = DoctorStorage.get(id);
+      if ("None" in doctorOpt) {
+        return Err({ EntityDoesNotExist: "Doctor does not exist" });
+      }
+      return Ok(doctorOpt.Some);
+    } catch (error) {
+      return Err({ UnexpectedError: "Could not update doctor" });
+    }
+  }),
 
   addDoctor: update(
     [DoctorPayload],
