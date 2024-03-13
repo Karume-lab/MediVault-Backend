@@ -28,6 +28,13 @@ import {
   updateHospitalProfile,
   deleteHospitalProfile,
 } from "./hospitalProfiles";
+import {
+  addPatientProfile,
+  getPatientProfile,
+  getPatientProfiles,
+  updatePatientProfile,
+  deletePatientProfile,
+} from "./patientProfiles";
 
 export {
   test,
@@ -56,4 +63,9 @@ export {
   getHospitalProfiles,
   updateHospitalProfile,
   deleteHospitalProfile,
+  addPatientProfile,
+  getPatientProfile,
+  getPatientProfiles,
+  updatePatientProfile,
+  deletePatientProfile,
 };

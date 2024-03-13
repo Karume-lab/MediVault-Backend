@@ -4,6 +4,7 @@ import cors from "cors";
 import {
   hospitalProfileRouter,
   medicalRecordRouter,
+  patientProfileRouter,
   profileRouter,
   requestAccessRouter,
   testRouter,
@@ -19,6 +20,7 @@ export default Server(() => {
   app.use(profileRouter);
   app.use(requestAccessRouter);
   app.use(hospitalProfileRouter);
+  app.use(patientProfileRouter);
 
   app.use(cors);
   return app.listen();
