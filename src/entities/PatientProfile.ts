@@ -1,0 +1,8 @@
+class PatientProfile {
+  id: string;
+  userId: string;
+  createdAt: Date;
+  updatedAt: Date | null;
+}
+
+export default PatientProfile;
