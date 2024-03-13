@@ -2,7 +2,9 @@ ENDPOINTS:
 # medical records
 # profiles
 # request access
-hospitals allowed
+# hospitals
+# patients
+
 authentcication
 protect the endpoints
 
