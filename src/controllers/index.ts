@@ -14,6 +14,13 @@ import {
   updateProfile,
   deleteProfile,
 } from "./profiles";
+import {
+  addRequestAccess,
+  getRequestAccess,
+  getRequestAccesses,
+  updateRequestAccess,
+  deleteRequestAccess,
+} from "./requestAccess";
 
 export {
   test,
@@ -32,4 +39,9 @@ export {
   getProfiles,
   updateProfile,
   deleteProfile,
+  addRequestAccess,
+  getRequestAccess,
+  getRequestAccesses,
+  updateRequestAccess,
+  deleteRequestAccess,
 };
