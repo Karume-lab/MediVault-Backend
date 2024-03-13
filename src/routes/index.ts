@@ -1,5 +1,6 @@
 import medicalRecordRouter from "./medicalRecords";
+import profileRouter from "./profiles";
 import testRouter from "./test";
-import userRouter from "./user";
+import userRouter from "./users";
 
-export { testRouter, userRouter, medicalRecordRouter };
+export { testRouter, userRouter, medicalRecordRouter, profileRouter };

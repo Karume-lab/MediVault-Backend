@@ -7,6 +7,13 @@ import {
   updateMedicalRecord,
   deleteMedicalRecord,
 } from "./medicalRecords";
+import {
+  addProfile,
+  getProfile,
+  getProfiles,
+  updateProfile,
+  deleteProfile,
+} from "./profiles";
 
 export {
   test,
@@ -20,4 +27,9 @@ export {
   getMedicalRecords,
   updateMedicalRecord,
   deleteMedicalRecord,
+  addProfile,
+  getProfile,
+  getProfiles,
+  updateProfile,
+  deleteProfile,
 };

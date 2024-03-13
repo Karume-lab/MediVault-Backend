@@ -1,5 +1,6 @@
+ENDPOINTS:
 # medical records
-profiles
+# profiles
 request access
 hospitals allowed
 authentcication

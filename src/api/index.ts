@@ -1,7 +1,7 @@
 import { Server } from "azle";
 import express from "express";
 import cors from "cors";
-import { medicalRecordRouter, testRouter, userRouter } from "../routes";
+import { medicalRecordRouter, profileRouter, testRouter, userRouter } from "../routes";
 
 export default Server(() => {
   const app = express();
@@ -9,6 +9,7 @@ export default Server(() => {
   app.use(testRouter);
   app.use(userRouter);
   app.use(medicalRecordRouter);
+  app.use(profileRouter);
 
   app.use(cors);
   return app.listen();
