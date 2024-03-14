@@ -13,7 +13,6 @@ const addMedicalRecord = (
     const medicalRecord: MedicalRecord = {
       id: uuid(),
       createdAt: timestampToDate(),
-      updatedAt: null,
       ...req.body,
     };
     MedicalRecordStorage.insert(medicalRecord.id, medicalRecord);
